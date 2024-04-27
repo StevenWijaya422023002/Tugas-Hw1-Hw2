@@ -1,5 +1,6 @@
 from admin import Admin
 from course import Course
+from Dosen import Dosen
 from Student import Student
 from grade import Grade
 from superadmin import Superadmin
@@ -12,6 +13,8 @@ def main():
     student1 = Student("Steven Wijaya", "422023002", "Steven@si.ukrida.ac.id", "studentpass", "E1234")
 
     dosen = admin.create_user_account("dosen", "Dosen", "Hendrik", "hendrick@si.ukrida.ac.id", "dosenpass", "F1212")
+    dosen1 = Dosen("Hendrik", "42202909", "hendrick@si.ukrida.ac.id", "studentpass", "E1234")
+   
     superadmin = admin.create_user_account("superadmin", "Superadmin", "Tubagus", "tubagus@ukrida.ac.id", "superadminpass", super_admin_id="S111")
 
     for user in [student, student1, dosen, superadmin]:
@@ -35,6 +38,11 @@ def main():
 
     student1.Enroll_In_Course(pbo_course)
     print(f"Student {student1.get_user_id()} enrolled in course {pbo_course.name}")
+
+    dosen1.Enroll_In_Course(pbo_course)
+    print(f"Dosen  mengajar di class {pbo_course.name}")
+
+
 
 if __name__ == "__main__":
     main()

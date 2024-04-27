@@ -12,13 +12,13 @@ class Admin(User):
         self.admin_id = user_id
         self.password = password  
 
-    def create_user_account(self, user_type, *args, **kwargs):  # Menggunakan **kwargs untuk menangani argumen tambahan
+    def create_user_account(self, user_type, *args, **kwargs): 
         if user_type == "Student":
             return Student(*args)
         elif user_type == "Dosen":
             return Dosen(*args)
         elif user_type == "superadmin":
-            return Superadmin(*args, **kwargs)  # Menggunakan **kwargs saat membuat objek Superadmin
+            return Superadmin(*args, **kwargs)  
         else:
             return None
 
