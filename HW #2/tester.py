@@ -39,8 +39,10 @@ def main():
     student1.Enroll_In_Course(pbo_course)
     print(f"Student {student1.get_user_id()} enrolled in course {pbo_course.name}")
 
+    print("\n")
+
     dosen1.Enroll_In_Course(pbo_course)
-    print(f"Dosen  mengajar di class {pbo_course.name}")
+    print(f"Dosen  {dosen1.get_user_id()} mengajar di class {pbo_course.name}")
 
 
 
